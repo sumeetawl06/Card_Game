@@ -30,8 +30,7 @@ export class GameContainerPresenter {
     }
 
     getCardModelsArray() {
-        let cardCount = GameDataSource.randomNumber
-        console.log("Cards Count Array = " + cardCount)
+        let cardCount = GameDataSource.generateRandomNumber()
         let arrayOfModels = []
         cardCount.forEach((value, index, array) => {
             const cardModel = new CardModel()
@@ -43,7 +42,6 @@ export class GameContainerPresenter {
             arrayOfModels.push(cardModel)
             arrayOfModels.push(anotherCardModel)
         })
-        console.log("Cards Array = " + JSON.stringify(arrayOfModels))
         arrayOfModels.sort(() => Math.random() - 0.5);
         let shuffleAr = this.shuffle(arrayOfModels)
         this.cardsDataArray = shuffleAr

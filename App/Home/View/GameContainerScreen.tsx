@@ -68,7 +68,11 @@ export function GameContainerScreen(props) {
     }
 
     const isAllMatched = () => {
-        return cards.map ( item => item.isMatched).flat().every( item => item === true)
+        if (cards.length > 0) {
+            return cards.map ( item => item.isMatched).flat().every( item => item === true)
+        }else {
+            return false
+        }
     }
 
     const matchFound = () =>  {
