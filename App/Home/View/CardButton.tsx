@@ -16,7 +16,7 @@ export function CardButton(props: {onTapCallback, cardItem, height, width}) {
     return(
         <TouchableOpacity
             onPress={() => {
-                props.onTapCallback(item)
+                !props.cardItem.isFaceUp && !props.cardItem.isMatched ? props.onTapCallback(item) : null
             }}
         >
         <View style = {{
