@@ -44,12 +44,6 @@ export function GameContainerScreen(props) {
         return oldList
     }
 
-    const replaceItemInArray = (cardModel) => {
-        let oldList = [...cards]
-        let index = oldList.indexOf(cardModel)
-        oldList.splice(index, 1, cardModel)
-        return oldList
-    }
     const resetCurrentTurn = () => {
         presenter.current.currentCard = undefined
         presenter.current.previousCard = undefined

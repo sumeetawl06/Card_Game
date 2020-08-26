@@ -7,7 +7,7 @@ export class GameDataSource {
 
     static generateRandomNumber() {
         let arr = [];
-        while(arr.length < 8){
+        while(arr.length < Constants.CARD_PAIRS_VALUE){
             let r = Math.floor(Math.random() * 100) + 1;
             if(arr.indexOf(r) === -1) arr.push(String(r));
         }
